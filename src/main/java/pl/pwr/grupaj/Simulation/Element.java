@@ -1,4 +1,4 @@
-package pl.pwr.grupaj;
+package pl.pwr.grupaj.Simulation;
 
 public abstract class Element {
     private int x;
@@ -21,4 +21,6 @@ public abstract class Element {
     public int getX() {
         return x;
     }
+
+    //public abstract void action();
 }
