@@ -3,11 +3,10 @@ package pl.pwr.grupaj.SimulationBuildingBlocks.NotMovingElements;
 import pl.pwr.grupaj.SimulationBuildingBlocks.Element;
 
 public class Bush extends Element {
-    private int x;
-    private int y;
-    public Bush(int x, int y) {
-        this.x=x;
-        this.y=y;
+
+
+    public Bush(int x, int y, int moveDistance) {
+        super(x, y, moveDistance);
     }
 
     @Override
@@ -17,7 +16,9 @@ public class Bush extends Element {
 
     @Override
     public void action(Element classtype){
-
+        //if(classtype instanceof Herbivore){
+        System.out.println("i love disowsky");
+        //}
     }
 
 }

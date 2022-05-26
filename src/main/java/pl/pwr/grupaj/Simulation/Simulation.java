@@ -14,19 +14,28 @@ public class Simulation {
 
     // TODO: 26.05.2022 ogarnac jak ustawic pola w klasach pod elementem 
     void simjulation() {
-
         for (Element i : Map.getList()) {
-            for (int j = i.getY() - i.getMoveDistance(); j < i.getY() + i.getMoveDistance(); j++) {
-                for (int k = i.getX() - i.getMoveDistance(); k < i.getX() + i.getMoveDistance(); k++) {
+            boolean actionPerformed=false;
+            int j = i.getY() - i.getMoveDistance();
+            for (; j < i.getY() + i.getMoveDistance(); j++) {
+                int k = i.getX() - i.getMoveDistance();
+                for (; k < i.getX() + i.getMoveDistance(); k++) {
                     try {
-                        if (Map.getMap()[k][j] != null && (i.getX() != k || i.getY() != k)) {
+                        if ((Map.getMap()[k][j] != null) && (i.getX() != k || i.getY() != j)) {
                             i.action(Map.getMap()[k][j]);
+                            actionPerformed=true;
+                            break;
                         }
                     } catch (ArrayIndexOutOfBoundsException e) {
-                        k = Math.min(Math.max(k, 0), 100) - 1;
-                        j = Math.min(Math.max(j, 0), 100);
+                        k = Math.min(Math.max(k, 0), 99) - 1;
+                        j = Math.min(Math.max(j, 0), 99);
                     }
                 }
+                if(actionPerformed)
+                    break;
+            }
+            if(!actionPerformed){
+                i.randomAction();
             }
         }
 

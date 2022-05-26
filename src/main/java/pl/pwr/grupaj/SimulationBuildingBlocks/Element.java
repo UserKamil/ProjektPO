@@ -9,6 +9,11 @@ public abstract class Element {
         return moveDistance;
     }
 
+    public Element(int x,int y,int moveDistance) {
+        this.x=x;
+        this.y=y;
+        this.moveDistance=moveDistance;
+    }
 
     public int getY() {
         return y;
@@ -21,4 +26,7 @@ public abstract class Element {
 
 
     public abstract void action(Element classtype);
+    public void randomAction(){
+        System.out.println("randomAction");
+    }
 }

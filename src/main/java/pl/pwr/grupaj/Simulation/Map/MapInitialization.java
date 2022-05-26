@@ -17,9 +17,9 @@ import java.util.Random;
 public class MapInitialization {
 
 
-    private double mapFilling = (Math.pow(Map.getMapDimensions(), 2) * 0.7);
+    private final double mapFilling = (Math.pow(Map.getMapDimensions(), 2) * 0.7);
 
-    // TODO: 25.05.2022 jak znajdziemy lepszy pomysł to zmienić 8 ifów
+
 
 
     public MapInitialization() {
@@ -39,28 +39,28 @@ public class MapInitialization {
                 continue;
             }
             if (chance == 0) {
-                map[x][y] = new Herbivore(x, y);
+                map[x][y] = new Herbivore(x, y,5);
             }
             if (chance == 1) {
-                map[x][y] = new Predator(x, y);
+                map[x][y] = new Predator(x, y,5);
             }
             if (chance == 2) {
-                map[x][y] = new Scavenger(x, y);
+                map[x][y] = new Scavenger(x, y,5);
             }
             if (chance == 3) {
-                map[x][y] = new Poacher(x, y);
+                map[x][y] = new Poacher(x, y,5);
             }
             if (chance == 4) {
-                map[x][y] = new Tourist(x, y);
+                map[x][y] = new Tourist(x, y,5);
             }
             if (chance == 5) {
-                map[x][y] = new Zoologist(x, y);
+                map[x][y] = new Zoologist(x, y,5);
             }
             if (chance == 6) {
-                map[x][y] = new Bush(x, y);
+                map[x][y] = new Bush(x, y,0);
             }
             if (chance == 7) {
-                map[x][y] = new Zoo(x, y);
+                map[x][y] = new Zoo(x, y,0);
             }
             list.add(map[x][y]);
         }
