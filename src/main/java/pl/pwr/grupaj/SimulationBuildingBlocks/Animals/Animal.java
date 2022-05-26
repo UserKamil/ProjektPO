@@ -1,9 +1,9 @@
 package pl.pwr.grupaj.SimulationBuildingBlocks.Animals;
 
-import pl.pwr.grupaj.Simulation.Element;
+import pl.pwr.grupaj.SimulationBuildingBlocks.Element;
 
 public abstract class Animal extends Element {
-    void move(){
+    abstract void move();
 
-    }
+
 }
