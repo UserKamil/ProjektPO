@@ -9,17 +9,13 @@ public class Zoologist extends Human{
         super(x, y, moveDistance);
     }
 
-    @Override
-    public int getMoveDistance() {
-        return 5;
-    }
+
 
 
     @Override
-    public void action(Element classtype){
-        //if(classtype instanceof Herbivore){
-        System.out.println("i love disowsky");
-        //}
+    public void action(Element NeighbourClass){
+        //if(NeighbourClass instanceof Zoologist){
+
     }
 
     @Override

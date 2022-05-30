@@ -2,27 +2,19 @@ package pl.pwr.grupaj.SimulationBuildingBlocks.Human;
 
 import pl.pwr.grupaj.SimulationBuildingBlocks.Element;
 
-public class Tourist extends Human{
+public class Tourist extends Human {
     public Tourist(int x, int y, int moveDistance) {
         super(x, y, moveDistance);
     }
 
     @Override
-    public int getMoveDistance() {
-        return 5;
+    public void action(Element NeighbourClass) {
+        if (NeighbourClass instanceof Tourist) {
+
+        }
     }
+        @Override
+        void move () {
 
-
-
-    @Override
-    public void action(Element classtype){
-        //if(classtype instanceof Herbivore){
-        System.out.println("i love disowsky");
-        //}
+        }
     }
-
-    @Override
-    void move() {
-
-    }
-}

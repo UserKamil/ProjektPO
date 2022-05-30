@@ -16,11 +16,7 @@ import java.util.Random;
 
 public class MapInitialization {
 
-
     private final double mapFilling = (Math.pow(Map.getMapDimensions(), 2) * 0.7);
-
-
-
 
     public MapInitialization() {
         initialization();
@@ -72,6 +68,5 @@ public class MapInitialization {
     public Element[][] getMap(){
         return map;
     }
-
 
 }

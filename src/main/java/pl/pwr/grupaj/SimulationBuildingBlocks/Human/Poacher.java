@@ -1,6 +1,13 @@
 package pl.pwr.grupaj.SimulationBuildingBlocks.Human;
 
+import pl.pwr.grupaj.Simulation.Map.Map;
+import pl.pwr.grupaj.SimulationBuildingBlocks.Animals.Herbivore;
+import pl.pwr.grupaj.SimulationBuildingBlocks.Animals.Predator;
+import pl.pwr.grupaj.SimulationBuildingBlocks.Animals.Scavenger;
 import pl.pwr.grupaj.SimulationBuildingBlocks.Element;
+import pl.pwr.grupaj.SimulationBuildingBlocks.NotMovingElements.DeadAnimal;
+
+import java.util.Random;
 
 public class Poacher extends Human{
     public Poacher(int x, int y, int moveDistance) {
@@ -8,17 +15,14 @@ public class Poacher extends Human{
     }
 
     @Override
-    public int getMoveDistance() {
-        return 5;
+    public void action(Element NeighbourClass) {
+        if (NeighbourClass instanceof Herbivore||NeighbourClass instanceof Predator || NeighbourClass instanceof Scavenger) {
+            Map.getList().add(new DeadAnimal(NeighbourClass.getX(),NeighbourClass.getY(),0));
+            Map.getList().remove(NeighbourClass);
+        }
+        randomAction();
     }
 
-
-    @Override
-    public void action(Element classtype){
-        //if(classtype instanceof Herbivore){
-        System.out.println("i love disowsky");
-        //}
-    }
 
     @Override
     void move() {

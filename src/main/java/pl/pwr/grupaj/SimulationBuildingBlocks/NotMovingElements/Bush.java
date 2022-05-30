@@ -15,10 +15,8 @@ public class Bush extends Element {
     }
 
     @Override
-    public void action(Element classtype){
-        //if(classtype instanceof Herbivore){
-        System.out.println("i love disowsky");
-        //}
+    public void action(Element NeighbourClass){
+        //if(NeighbourClass instanceof Bush){
     }
 
 }

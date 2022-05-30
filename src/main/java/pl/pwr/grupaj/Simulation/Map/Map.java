@@ -23,6 +23,9 @@ public class Map {
     }
 
 
+    public static void setList(ArrayList<Element> list) {
+        Map.list = list;
+    }
 
     public Map(int mapDimensions) {
         if (mapDimensions < 5) {

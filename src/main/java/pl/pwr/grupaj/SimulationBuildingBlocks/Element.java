@@ -29,4 +29,14 @@ public abstract class Element {
     public void randomAction(){
         System.out.println("randomAction");
     }
+
+    public Element setX(int x) {
+        this.x = x;
+        return this;
+    }
+
+    public Element setY(int y) {
+        this.y = y;
+        return this;
+    }
 }
