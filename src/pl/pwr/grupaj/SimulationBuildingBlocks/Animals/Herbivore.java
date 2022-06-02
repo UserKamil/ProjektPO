@@ -1,6 +1,9 @@
 package pl.pwr.grupaj.SimulationBuildingBlocks.Animals;
 
 import pl.pwr.grupaj.Simulation.Map.Map;
+import pl.pwr.grupaj.SimulationBuildingBlocks.Animals.Animal;
+import pl.pwr.grupaj.SimulationBuildingBlocks.Animals.Predator;
+import pl.pwr.grupaj.SimulationBuildingBlocks.Animals.Scavenger;
 import pl.pwr.grupaj.SimulationBuildingBlocks.Element;
 
 import java.util.Random;
@@ -28,7 +31,6 @@ public class Herbivore extends Animal {
         }
     }
 
-    @Override
     void move() {
 
     }

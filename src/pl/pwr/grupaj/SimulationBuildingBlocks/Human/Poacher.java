@@ -7,8 +7,6 @@ import pl.pwr.grupaj.SimulationBuildingBlocks.Animals.Scavenger;
 import pl.pwr.grupaj.SimulationBuildingBlocks.Element;
 import pl.pwr.grupaj.SimulationBuildingBlocks.NotMovingElements.DeadAnimal;
 
-import java.util.Random;
-
 public class Poacher extends Human{
     public Poacher(int x, int y, int moveDistance) {
         super(x, y, moveDistance);

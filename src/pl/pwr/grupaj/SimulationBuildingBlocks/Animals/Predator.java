@@ -4,6 +4,8 @@ import pl.pwr.grupaj.Simulation.Map.Map;
 import pl.pwr.grupaj.SimulationBuildingBlocks.Element;
 import pl.pwr.grupaj.SimulationBuildingBlocks.NotMovingElements.DeadAnimal;
 
+import pl.pwr.grupaj.SimulationBuildingBlocks.Animals.Herbivore;
+
 
 public class Predator extends Animal{
 
