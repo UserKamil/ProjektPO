@@ -1,5 +1,7 @@
 package pl.pwr.grupaj;
 
+import java.util.List;
+
 public class Map {
     public static int getMapDimensions() {
         return mapDimensions;
@@ -8,6 +10,14 @@ public class Map {
         Map.mapDimensions = mapDimensions;
     }
     private static int mapDimensions;
-    private static int map;
-    private static int list;
+
+    public static List<Element> getList() {
+        return list;
+    }
+
+    public static void setList(List<Element> list) {
+        Map.list = list;
+    }
+
+    private static List<Element> list;
 }
