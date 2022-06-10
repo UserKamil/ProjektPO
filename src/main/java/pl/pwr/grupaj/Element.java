@@ -2,7 +2,6 @@ package pl.pwr.grupaj;
 
 public abstract class Element {
     int x;
-
     public Element(int x, int y) {
         this.x=x;
         this.y=y;
