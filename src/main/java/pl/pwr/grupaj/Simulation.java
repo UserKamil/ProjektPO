@@ -10,6 +10,11 @@ public class Simulation{
 
     private static int maxRounds;
     List<Action> actions=new ArrayList<>();
+    Simulation(){
+        simulation();
+    }
 
-
+    void simulation(){
+        Initializer.initialization();
+    }
 }
