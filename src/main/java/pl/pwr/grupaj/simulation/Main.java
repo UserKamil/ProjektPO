@@ -1,4 +1,4 @@
-package pl.pwr.grupaj;
+package pl.pwr.grupaj.simulation;
 
 
 public class Main {
