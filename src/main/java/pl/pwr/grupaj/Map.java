@@ -11,13 +11,13 @@ public class Map {
     }
     private static int mapDimensions;
 
-    public static List<Element> getList() {
+    public static List<List<Element>> getList() {
         return list;
     }
 
-    public static void setList(List<Element> list) {
+    public static void setList(List<List<Element>> list) {
         Map.list = list;
     }
 
-    private static List<Element> list;
+    private static List<List<Element>> list;
 }
