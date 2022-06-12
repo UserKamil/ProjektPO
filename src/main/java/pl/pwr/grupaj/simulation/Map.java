@@ -8,6 +8,7 @@ public class Map {
     private static int mapDimensions;
     private static List<List<Element>> list;
 
+
     public static int getMapDimensions() {
         return mapDimensions;
     }

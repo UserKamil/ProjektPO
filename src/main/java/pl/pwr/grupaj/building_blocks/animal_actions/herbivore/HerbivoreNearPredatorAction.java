@@ -10,15 +10,8 @@ import java.util.List;
 import java.util.Random;
 
 public class HerbivoreNearPredatorAction {
-    private List<Element> neighbours;
-    List<Element> listOfHerbivore;
 
-    public HerbivoreNearPredatorAction(List<Element> neighbours, List<Element> listOfHerbivore) {
-        this.neighbours = neighbours;
-        this.listOfHerbivore = listOfHerbivore;
-    }
-
-    public boolean herbivoreNearPredatorAction(Element herbivore) {
+    public void herbivoreNearPredatorAction(Element herbivore,Element predator) {
         /*Random random = new Random();
         Predator predator = new Predator(-1, -1);
         for (Element animal : neighbours) {
@@ -37,6 +30,5 @@ public class HerbivoreNearPredatorAction {
                 }
             }
         }*/
-        return false;
     }
 }
