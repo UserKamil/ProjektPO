@@ -1,5 +1,5 @@
 package pl.pwr.grupaj.simulation;
-
+import pl.pwr.grupaj.simulation.Simulation;
 
 public class Main {
 

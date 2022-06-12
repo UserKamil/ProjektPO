@@ -13,7 +13,7 @@ public class CheckNeighbours {
     public List<Element> checkNeighbours(Element someAnimal){
         for (List<Element> list: Map.getList()) {
             for (Element otherAnimal: list) {
-                if(CheckVectorLength.checkVectorLength(someAnimal,otherAnimal)<=someAnimal.getMoveDistance())
+                if(CheckDistance.checkDistanceBeetweenObjects(someAnimal,otherAnimal)<=someAnimal.getMoveDistance())
                     neighbourList.add(otherAnimal);
             }
         }

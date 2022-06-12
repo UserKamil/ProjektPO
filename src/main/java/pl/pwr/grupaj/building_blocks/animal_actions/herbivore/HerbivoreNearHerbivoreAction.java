@@ -9,19 +9,27 @@ import java.util.Random;
 public class HerbivoreNearHerbivoreAction {
     private List<Element> neighbours;
 
-    public HerbivoreNearHerbivoreAction(List<Element> neighbours) {
-        this.neighbours = neighbours;
+    public List<Element> getListOfHerbivore() {
+        return listOfHerbivore;
     }
 
-    public void herbivoreNearHerbivoreAction(Element herbivore) {
+    private List<Element> listOfHerbivore;
+
+    public HerbivoreNearHerbivoreAction(List<Element> neighbours,List<Element> listOfHerbivore) {
+        this.neighbours = neighbours;
+        this.listOfHerbivore=listOfHerbivore;
+    }
+
+    public boolean herbivoreNearHerbivoreAction(Element herbivore) {
         Random random = new Random();
         for (Element animal : neighbours) {
-            if (animal.getClass().isInstance(new Herbivore(-1, -1))) {
+            if (animal.getClass().isInstance(new Herbivore(-1, -1))&& animal!=herbivore) {
                 herbivore.setX(animal.getX());
                 herbivore.setY(animal.getY());
-                new Herbivore(herbivore.getX(),herbivore.getY());
+                listOfHerbivore.add(new Herbivore(herbivore.getX(),herbivore.getY()));
+                return true;
             }
         }
+        return false;
     }
-
 }
