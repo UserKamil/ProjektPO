@@ -13,6 +13,7 @@ import java.util.List;
 public class Simulation {
 
     private static int maxRounds;
+
     Simulation() {
         simulation();
     }
@@ -23,14 +24,14 @@ public class Simulation {
 
     void simulation() {
         Initializer.initialization();
-        List<Action> actions = new ArrayList<>(Arrays.asList(new HerbivoreActions(), new PredatorActions(), new ScavengerActions()));
+        List<Action> listOfActions = new ArrayList<>(Arrays.asList(new HerbivoreActions(), new PredatorActions(), new ScavengerActions()));
+        List<List<Element>> listOfAnimals = new ArrayList<>(Arrays.asList(Map.getList().get(0), Map.getList().get(1), Map.getList().get(2)));
         for (int i = 1; i <= maxRounds; i++) {
-            for (List<Element> listOfSpecificAnimal: Map.getList()) {
-                for (Action action : actions) {
+            for (List<Element> listOfSpecificAnimal : listOfAnimals) {
+                for (Action action : listOfActions) {
                     action.action(listOfSpecificAnimal);
                 }
             }
-
         }
     }
 }
