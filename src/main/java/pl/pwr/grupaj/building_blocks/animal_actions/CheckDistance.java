@@ -1,4 +1,4 @@
-package pl.pwr.grupaj.building_blocks.animal_actions.helpingclasses;
+package pl.pwr.grupaj.building_blocks.animal_actions;
 
 import pl.pwr.grupaj.building_blocks.Element;
 

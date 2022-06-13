@@ -15,10 +15,7 @@ public abstract class Element {
         return moveDistance;
     }
 
-    public Element setMoveDistance(int moveDistance) {
-        this.moveDistance = moveDistance;
-        return this;
-    }
+
 
     public int getX() {
         return x;
