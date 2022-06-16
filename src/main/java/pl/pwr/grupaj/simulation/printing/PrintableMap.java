@@ -1,6 +1,6 @@
 package pl.pwr.grupaj.simulation.printing;
 
-import pl.pwr.grupaj.building_blocks.Element;
+import pl.pwr.grupaj.building.blocks.Element;
 import pl.pwr.grupaj.simulation.Map;
 
 import java.util.List;

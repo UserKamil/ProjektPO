@@ -1,4 +1,4 @@
-package pl.pwr.grupaj.building_blocks;
+package pl.pwr.grupaj.building.blocks;
 
 public class Bush extends Element {
     private final static int BUSH_MOVEDISTANCE = 0;

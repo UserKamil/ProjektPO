@@ -1,6 +1,6 @@
-package pl.pwr.grupaj.building_blocks.animal_actions;
+package pl.pwr.grupaj.building.blocks.actions;
 
-import pl.pwr.grupaj.building_blocks.Element;
+import pl.pwr.grupaj.building.blocks.Element;
 
 public class CheckDistance {
     public static int checkDistanceBeetweenObjects(Element mainObject, Element secondaryObject){

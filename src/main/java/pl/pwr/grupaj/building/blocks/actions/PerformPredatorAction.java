@@ -1,8 +1,8 @@
-package pl.pwr.grupaj.building_blocks.animal_actions;
+package pl.pwr.grupaj.building.blocks.actions;
 
-import pl.pwr.grupaj.building_blocks.DeadAnimal;
-import pl.pwr.grupaj.building_blocks.Element;
-import pl.pwr.grupaj.building_blocks.animals.Herbivore;
+import pl.pwr.grupaj.building.blocks.DeadAnimal;
+import pl.pwr.grupaj.building.blocks.Element;
+import pl.pwr.grupaj.building.blocks.animals.Herbivore;
 import pl.pwr.grupaj.simulation.Map;
 
 import java.util.Random;

@@ -1,4 +1,4 @@
-package pl.pwr.grupaj.building_blocks;
+package pl.pwr.grupaj.building.blocks;
 
 public class DeadAnimal extends Element {
     private final static int DEAD_ANIMAL_MOVEDISTANCE = 0;
