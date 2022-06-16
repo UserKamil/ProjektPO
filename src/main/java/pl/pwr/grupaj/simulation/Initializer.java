@@ -1,29 +1,30 @@
 package pl.pwr.grupaj.simulation;
 
 
-import pl.pwr.grupaj.building_blocks.Bush;
-import pl.pwr.grupaj.building_blocks.Element;
-import pl.pwr.grupaj.building_blocks.animals.Herbivore;
-import pl.pwr.grupaj.building_blocks.animals.Predator;
-import pl.pwr.grupaj.building_blocks.animals.Scavenger;
+import pl.pwr.grupaj.building.blocks.Bush;
+import pl.pwr.grupaj.building.blocks.Element;
+import pl.pwr.grupaj.building.blocks.animals.Herbivore;
+import pl.pwr.grupaj.building.blocks.animals.Predator;
+import pl.pwr.grupaj.building.blocks.animals.Scavenger;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
-public class
-Initializer {
-    private final static double mapFilling = Math.floor(0.7 * (Map.getMapDimensions() * Map.getMapDimensions()));
+public class Initializer {
 
-    public static void initialization() {
-        Random random = new Random();
-        List<Element> helpingList = new ArrayList<>();
-        List<Element> herbivore = new ArrayList<>();
-        List<Element> predator = new ArrayList<>();
-        List<Element> scavenger = new ArrayList<>();
-        List<Element> bush = new ArrayList<>();
-        List<Element> deadAnimal = new ArrayList<>();
+  private final static double mapFilling =
+      Math.floor(0.7 * (Map.getMapDimensions() * Map.getMapDimensions()));
+
+  public static void initialization() {
+    Random random = new Random();
+    List<Element> helpingList = new ArrayList<>();
+    List<Element> herbivore = new ArrayList<>();
+    List<Element> predator = new ArrayList<>();
+    List<Element> scavenger = new ArrayList<>();
+    List<Element> bush = new ArrayList<>();
+    List<Element> deadAnimal = new ArrayList<>();
         List<List<Element>> mainList = new ArrayList<>(Arrays.asList(herbivore, predator, scavenger, bush, deadAnimal));
         for (int i = 0; i < mapFilling; i++) {
             int x = random.nextInt(Map.getMapDimensions());

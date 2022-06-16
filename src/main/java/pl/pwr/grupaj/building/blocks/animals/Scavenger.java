@@ -1,6 +1,6 @@
-package pl.pwr.grupaj.building_blocks.animals;
+package pl.pwr.grupaj.building.blocks.animals;
 
-import pl.pwr.grupaj.building_blocks.Element;
+import pl.pwr.grupaj.building.blocks.Element;
 
 public class Scavenger extends Element {
     private static final int SCAVENGER_MOVE_DISTANCE = 1;

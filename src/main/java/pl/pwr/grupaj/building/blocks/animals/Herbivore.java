@@ -1,6 +1,6 @@
-package pl.pwr.grupaj.building_blocks.animals;
+package pl.pwr.grupaj.building.blocks.animals;
 
-import pl.pwr.grupaj.building_blocks.Element;
+import pl.pwr.grupaj.building.blocks.Element;
 
 public class Herbivore extends Element {
     private static final int HERBIVORE_MOVE_DISTANCE = 1;
