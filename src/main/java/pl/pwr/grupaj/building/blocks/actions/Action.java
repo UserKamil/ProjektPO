@@ -5,6 +5,6 @@ import pl.pwr.grupaj.simulation.SimulationMap;
 
 public interface Action {
 
-  void apply(Element animal, SimulationMap map);
+  SimulationMap applyActions();
 
 }

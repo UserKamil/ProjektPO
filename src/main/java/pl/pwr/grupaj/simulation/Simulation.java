@@ -1,43 +1,57 @@
 package pl.pwr.grupaj.simulation;
 
 import pl.pwr.grupaj.building.blocks.Element;
-import pl.pwr.grupaj.building.blocks.actions.Action;
+import pl.pwr.grupaj.building.blocks.TypeOfElement;
+import pl.pwr.grupaj.building.blocks.actions.HerbivoreActions;
+import pl.pwr.grupaj.building.blocks.actions.PredatorActions;
+import pl.pwr.grupaj.building.blocks.actions.ScavengerActions;
+import pl.pwr.grupaj.simulation.printing.PrintableMap;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Simulation {
 
-  private final int maxRounds;
-  private final SimulationMap map;
-  private final List<Action> availableActions;
+    private final int maxRounds;
+    private SimulationMap simulationMap;
 
-  public Simulation(int maxRounds, SimulationMap map, List<Action> actions) {
-    this.maxRounds = maxRounds;
-    this.map = map;
-    this.availableActions = actions;
-  }
-
-  SimulationStats run() {
-
-    List<Element> animals = generateAnimals(); // or pass in constuctor
-    Initializer.initialization();
-
-    for (int currentRound = 0; currentRound <= maxRounds; currentRound++) {
-      for (Element animal : animals) {
-        applyActions(animal);
-      }
+    public Simulation(int maxRounds, SimulationMap simulationMap) {
+        this.maxRounds = maxRounds;
+        this.simulationMap = simulationMap;
     }
 
-    return null; // collect some stats along the way
-  }
+    SimulationStats run() {
 
-  private void applyActions(Element animal) {
-    for (Action action : availableActions) {
-      action.apply(animal, map);
+        HashMap<TypeOfElement, List<Element>> animals = generateAnimals();
+        PrintableMap printableMap=new PrintableMap();
+
+
+        for (int currentRound = 0; currentRound <= maxRounds; currentRound++) {
+            for (TypeOfElement typeOfElement : animals.keySet()) {
+                applyActions(typeOfElement);
+            }
+        }
+
+
+        return null; // collect some stats along the way
     }
-  }
 
-  private List<Element> generateAnimals() {
-    return null;
-  }
+    private void applyActions(TypeOfElement typeOfElement) {
+        switch (typeOfElement){
+            case HERBIVORE -> simulationMap = new HerbivoreActions(simulationMap).applyActions();
+            case PREDATOR -> simulationMap = new PredatorActions(simulationMap).applyActions();
+            case SCAVENGER -> simulationMap = new ScavengerActions(simulationMap).applyActions();
+        }
+    }
+
+    private HashMap<TypeOfElement, List<Element>> generateAnimals() {
+        HashMap<TypeOfElement, List<Element>> animalsMap = new HashMap<>(Map.of(
+                TypeOfElement.HERBIVORE, simulationMap.getMap().get(TypeOfElement.HERBIVORE),
+                TypeOfElement.PREDATOR, simulationMap.getMap().get(TypeOfElement.PREDATOR),
+                TypeOfElement.SCAVENGER, simulationMap.getMap().get(TypeOfElement.SCAVENGER)
+        ));
+        return animalsMap;
+    }
 }
