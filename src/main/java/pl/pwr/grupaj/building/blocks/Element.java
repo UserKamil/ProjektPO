@@ -31,28 +31,4 @@ public abstract class Element {
     public void setY(int y) {
         this.y = y;
     }
-
-    @Override
-    public int hashCode() {
-        int result = x;
-        result = 31 * result + moveDistance;
-        result = 31 * result + y;
-        return result;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o)
-            return true;
-        if (o == null || getClass() != o.getClass())
-            return false;
-
-        Element element = (Element) o;
-
-        if (x != element.x)
-            return false;
-        if (moveDistance != element.moveDistance)
-            return false;
-        return y == element.y;
-    }
 }
